@@ -1,4 +1,5 @@
-import 'package:practiceapp/model/new.dart';
+import 'package:practiceapp/model/product.dart';
+
 import 'package:flutter/material.dart';
 
 final List<Product> products = [

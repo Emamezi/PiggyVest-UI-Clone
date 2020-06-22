@@ -73,7 +73,7 @@ Widget buildInfoContainer(
         ),
         border: Border.all(
           width: 1.0,
-          color: Colors.blue.shade700,
+          color: Theme.of(context).primaryColor,
         ),
       ),
       child: Row(

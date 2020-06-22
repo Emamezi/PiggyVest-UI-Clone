@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practiceapp/widgets/quicksave_option.dart';
 
 class QuickSave extends StatefulWidget {
   final BuildContext ctx;
@@ -11,6 +12,7 @@ class _QuickSaveState extends State<QuickSave> {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
+      backgroundColor: Theme.of(context).primaryColor,
       onPressed: () {
         showModalBottomSheet(
           backgroundColor: Colors.transparent,
@@ -68,12 +70,37 @@ class _QuickSaveState extends State<QuickSave> {
                         Text(
                           'QuickSave',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 30,
                           ),
                         ),
-                        Text('Enter an amount and a destination to save to')
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text('Enter an amount and a destination to save to'),
+                        QuickSaveOption(
+                          heading: 'Tap here & enter... (e.g 5000)',
+                          labelText: 'Tap here & enter... (e.g 5000)',
+                        ),
+                        QuickSaveOption(
+                          heading: 'Choose a Destination',
+                          labelText: 'My Piggybank -72.00',
+                        ),
+                        Container(
+                          width: double.infinity,
+                          child: FlatButton(
+                            color: Theme.of(context).primaryColor,
+                            textColor: Theme.of(context).buttonColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              'PROCEED',
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -96,12 +123,3 @@ class _QuickSaveState extends State<QuickSave> {
     );
   }
 }
-
-
-
-//  Text('Tap here & enter... (e.g 5000)'),
-//                           TextField(
-//                             decoration: InputDecoration(
-//                               labelText: 'Tap here & enter... (e.g 5000)'
-//                             ),
-//                           ),
