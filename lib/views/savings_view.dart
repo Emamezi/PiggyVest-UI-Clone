@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practiceapp/model/product.dart';
+import 'package:practiceapp/model/products.dart';
 
 class SavingsView extends StatelessWidget {
   @override
