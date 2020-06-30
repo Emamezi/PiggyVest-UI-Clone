@@ -3,6 +3,7 @@ import '../views/account_view.dart';
 import '../views/home_view.dart';
 import '../views/invest_view.dart';
 import '../views/savings_view.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Wrapper extends StatefulWidget {
   @override
@@ -31,7 +32,8 @@ class _WrapperState extends State<Wrapper> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              FontAwesomeIcons.home,
+              size: 20,
               color: _selectedViewIndex == 0
                   ? Theme.of(context).primaryColor
                   : null,
@@ -39,21 +41,25 @@ class _WrapperState extends State<Wrapper> {
             title: Text('Home'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.track_changes,
+            // Icons.track_changes
+            icon: Icon(FontAwesomeIcons.podcast,
+                size: 20,
                 color: _selectedViewIndex == 1
                     ? Theme.of(context).primaryColor
                     : null),
             title: Text('Savings'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.airplanemode_active,
+            icon: Icon(FontAwesomeIcons.rocket,
+                size: 20,
                 color: _selectedViewIndex == 2
                     ? Theme.of(context).primaryColor
                     : null),
             title: Text('Investment'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person,
+            icon: Icon(FontAwesomeIcons.userTie,
+                size: 20,
                 color: _selectedViewIndex == 3 ? Colors.blue.shade700 : null),
             title: Text('Account'),
             // activeIcon: Column(
