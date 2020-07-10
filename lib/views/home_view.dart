@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:practiceapp/widgets/options_listview.dart';
 import 'package:practiceapp/widgets/quicksave.dart';
 
@@ -21,7 +22,7 @@ class HomeView extends StatelessWidget {
                   fontSize: 30,
                 ),
               ),
-              Text('Good morning, wash your hands'),
+              Text('Good morning, wash your hands ⛅️'),
               SizedBox(height: 20),
               Container(
                 height: deviceSize.height * 0.16,
@@ -30,7 +31,7 @@ class HomeView extends StatelessWidget {
                 child: OptionsListView(deviceSize: deviceSize),
               ),
               SizedBox(height: 30),
-              Text('WATCH THE LAST OPENHOUSE'),
+              Text('WATCH THE LAST OPENHOUSE 🤓'),
               SizedBox(
                 height: 150,
               ),
@@ -38,18 +39,24 @@ class HomeView extends StatelessWidget {
               buildInfoContainer(
                   'Get Piggybank Savings Interest for May',
                   'Tap to earn interest on your Piggybank Savings for June',
-                  Icons.card_giftcard,
+                  FontAwesomeIcons.gift,
                   context),
               buildInfoContainer(
                   'Stay Informed: COVID-19',
                   'Get the latest Information directly from the NCDC about coronavirus in Nigeria',
-                  Icons.show_chart,
+                  FontAwesomeIcons.chartLine,
+                  context),
+              buildInfoContainer(
+                  'See you urecent activities',
+                  'See your most recent activity on PiggyVest',
+                  FontAwesomeIcons.thumbsUp,
                   context),
               buildInfoContainer(
                   'Create a Safelock',
                   'Avoid spending temptations.Tap to create a safelock',
-                  Icons.lock_outline,
+                  FontAwesomeIcons.lock,
                   context),
+              SizedBox(height: 50)
             ],
           ),
         ),
@@ -83,7 +90,7 @@ Widget buildInfoContainer(
             flex: 1,
             child: Icon(
               icon,
-              color: Colors.blue,
+              color: Theme.of(context).primaryColor,
               size: 30.0,
             ),
           ),
@@ -100,8 +107,8 @@ Widget buildInfoContainer(
                     textAlign: TextAlign.justify,
                     // softWrap: true,
                     style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 14,
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -111,7 +118,7 @@ Widget buildInfoContainer(
                     textAlign: TextAlign.left,
                     // overflow: TextOverflow.clip,
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 13,
                       // decoration: TextDecoration.
                     ),
                   ),

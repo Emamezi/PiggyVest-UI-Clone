@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:practiceapp/widgets/quicksave_option.dart';
 
+import 'buttonfield.dart';
+
 class QuickSave extends StatefulWidget {
   final BuildContext ctx;
   QuickSave(this.ctx);
@@ -88,20 +90,7 @@ class _QuickSaveState extends State<QuickSave> {
                             heading: 'Choose a Destination',
                             labelText: 'My Piggybank -72.00',
                           ),
-                          Container(
-                            width: double.infinity,
-                            child: FlatButton(
-                              color: Theme.of(context).primaryColor,
-                              textColor: Theme.of(context).buttonColor,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              onPressed: () {},
-                              child: Text(
-                                'PROCEED',
-                              ),
-                            ),
-                          ),
+                          ButtonField(),
                         ],
                       ),
                     ),

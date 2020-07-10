@@ -13,13 +13,13 @@ class OptionsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       scrollDirection: Axis.horizontal,
-      itemExtent: deviceSize.width,
+      itemExtent: deviceSize.width - 20,
       addSemanticIndexes: true,
       // semanticChildCount: 3,
       // dragStartBehavior: DragStartBehavior.start,
       children: <Widget>[
         OptionsContainer(
-          color: Colors.blue.shade700,
+          color: Theme.of(context).primaryColor,
           icons: Icons.verified_user,
           iconColor: Colors.white,
           text1: 'Total Savings',
