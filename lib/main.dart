@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter PiggyVest',
       theme: ThemeData(
         primaryColor: Colors.blue.shade800,
-        accentColor: Colors.purple,
+        accentColor: Color(0xff8633d8),
         // accentColorBrightness: Brightness.dark,
-        buttonColor: Colors.white,
+        buttonColor: Colors.black,
+
         // fontFamily: GoogleFonts.roboto(
         //     textStyle: TextStyle(
         //   fontSize: 18,

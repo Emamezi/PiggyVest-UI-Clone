@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:practiceapp/views/account_settings_view.dart';
+import 'package:practiceapp/widgets/aoount_listtile.dart';
 
 class AccountView extends StatelessWidget {
   @override
@@ -28,11 +30,13 @@ class AccountView extends StatelessWidget {
                 height: 100,
               ),
               SwitchListTile(
+                activeColor: Theme.of(context).primaryColor,
                 value: true,
                 onChanged: (val) {},
                 title: Text('Enable Finger Print/Face ID'),
               ),
               SwitchListTile(
+                activeColor: Theme.of(context).primaryColor,
                 value: true,
                 onChanged: (val) {},
                 title: Text('Show Dashboard Account Balances'),
@@ -42,34 +46,37 @@ class AccountView extends StatelessWidget {
                 onChanged: (val) {},
                 title: Text('Enable Dark Mode'),
               ),
-              accountListTile(
-                  onTap: null,
+              AccountListTile(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (ctx) => AccountSettingsView()));
+                  },
                   text: 'My Account Setings',
                   icon: Icons.person_outline),
-              accountListTile(
+              AccountListTile(
                   onTap: () {}, text: 'Self Help', icon: Icons.attach_file),
-              accountListTile(
+              AccountListTile(
                   onTap: null, text: 'Add Your BVN', icon: Icons.lock_outline),
-              accountListTile(
+              AccountListTile(
                   onTap: null, text: 'Refer & Eran 1,000', icon: Icons.share),
-              accountListTile(
+              AccountListTile(
                   onTap: null,
                   text: 'Withdraw Funds',
                   icon: Icons.attach_money),
-              accountListTile(
+              AccountListTile(
                   onTap: null,
                   text: 'My Card & Bank Setings',
                   icon: Icons.credit_card),
-              accountListTile(
+              AccountListTile(
                   onTap: null,
                   text: 'View PiggyVest Library',
                   icon: Icons.bookmark),
-              accountListTile(
+              AccountListTile(
                 onTap: null,
                 text: 'Contact US',
                 icon: FontAwesomeIcons.phoneAlt,
               ),
-              accountListTile(
+              AccountListTile(
                   onTap: null,
                   text: 'log Out',
                   color1: Theme.of(context).errorColor,
@@ -83,43 +90,4 @@ class AccountView extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget accountListTile(
-    {Function onTap,
-    IconData icon,
-    IconData icon2,
-    Color color2,
-    String text,
-    Color color1}) {
-  return Column(
-    children: <Widget>[
-      SizedBox(height: 15),
-      Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-            width: 0.5,
-            color: Colors.grey,
-          ),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10),
-            topRight: Radius.circular(10),
-            bottomRight: Radius.circular(10),
-          ),
-        ),
-        child: ListTile(
-          onTap: onTap,
-          leading: Icon(
-            icon,
-            color: color2,
-          ),
-          title: Text(
-            text,
-            style: TextStyle(color: color1),
-          ),
-          trailing: Icon(icon2),
-        ),
-      ),
-    ],
-  );
 }
