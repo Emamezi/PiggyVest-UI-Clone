@@ -32,31 +32,35 @@ class HomeView extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Text('WATCH THE LAST OPENHOUSE 🤓'),
-              SizedBox(
-                height: 150,
+              ImageContainer(
+                image: 'assets/images/undraw_celebration_0jvk.png',
               ),
               Text('T0-DO-LIST'),
-              buildInfoContainer(
+              ProductsContainer(
                   'Get Piggybank Savings Interest for May',
                   'Tap to earn interest on your Piggybank Savings for June',
                   FontAwesomeIcons.gift,
                   context),
-              buildInfoContainer(
+              ProductsContainer(
                   'Stay Informed: COVID-19',
                   'Get the latest Information directly from the NCDC about coronavirus in Nigeria',
                   FontAwesomeIcons.chartLine,
                   context),
-              buildInfoContainer(
+              ProductsContainer(
                   'See you urecent activities',
                   'See your most recent activity on PiggyVest',
                   FontAwesomeIcons.thumbsUp,
                   context),
-              buildInfoContainer(
+              ProductsContainer(
                   'Create a Safelock',
                   'Avoid spending temptations.Tap to create a safelock',
                   FontAwesomeIcons.lock,
                   context),
-              SizedBox(height: 50)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 30),
+                child: ImageContainer(
+                    image: 'assets/images/undraw_having_fun_iais-2.png'),
+              ),
             ],
           ),
         ),
@@ -65,7 +69,32 @@ class HomeView extends StatelessWidget {
   }
 }
 
-Widget buildInfoContainer(
+class ImageContainer extends StatelessWidget {
+  final String image;
+  const ImageContainer({
+    this.image,
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Image.asset(
+          image,
+          width: double.infinity,
+          height: 120,
+          fit: BoxFit.fitWidth,
+          // fit: BoxFit.fill,
+        ),
+      ),
+    );
+  }
+}
+
+Widget ProductsContainer(
     String text1, text2, IconData icon, BuildContext context) {
   return Padding(
     padding: const EdgeInsets.all(8.0),

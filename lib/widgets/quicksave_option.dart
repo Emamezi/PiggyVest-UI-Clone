@@ -26,21 +26,21 @@ class _QuickSaveOptionState extends State<QuickSaveOption> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 10),
           Container(
-            height: 40,
+            height: 45,
             child: TextField(
               decoration: InputDecoration(
                 fillColor: Colors.grey[100],
                 border: OutlineInputBorder(
                     borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(5)),
                 filled: true,
                 labelText: widget.labelText,
                 labelStyle: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
-                  color: Colors.grey.shade500,
+                  color: Colors.grey.shade400,
                 ),
               ),
             ),

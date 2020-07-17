@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue.shade800,
         accentColor: Color(0xff8633d8),
         // accentColorBrightness: Brightness.dark,
-        buttonColor: Colors.black,
+        buttonColor: Colors.white,
 
         // fontFamily: GoogleFonts.roboto(
         //     textStyle: TextStyle(

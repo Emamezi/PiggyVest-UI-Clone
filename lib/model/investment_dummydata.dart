@@ -14,9 +14,21 @@ final investmentData = [
     price: 5000,
   ),
   Investment(
+    title: 'Poultry farm in SouthWest Nigeria',
+    image: 'assets/images/IMG_5025.JPG',
+    investors: 988,
+    price: 5000,
+  ),
+  Investment(
     title: 'Rice Farm Investment',
     image: 'assets/images/IMG_5027.JPG',
     investors: 1264,
+    price: 5000,
+  ),
+  Investment(
+    title: 'Cowpea Commodity Investment',
+    image: 'assets/images/IMG_5031.JPG',
+    investors: 833,
     price: 5000,
   ),
   Investment(
@@ -28,12 +40,6 @@ final investmentData = [
   Investment(
     title: 'Cattle Header stock farm Investment',
     image: 'assets/images/Cattle.jpg',
-    price: 5000,
-  ),
-  Investment(
-    title: 'Cattle Fattening Program Investment',
-    image: 'assets/images/Cattle.jpg',
-    investors: 1080,
     price: 5000,
   ),
   Investment(
@@ -55,9 +61,21 @@ final investmentData = [
     price: 5000,
   ),
   Investment(
+    title: 'Secue high yield investment',
+    image: 'assets/images/IMG_5035.JPG',
+    investors: 833,
+    price: 5000,
+  ),
+  Investment(
     title: 'Fish Farm',
     image: 'assets/images/IMG_5029.JPG',
     investors: 833,
+    price: 5000,
+  ),
+  Investment(
+    title: 'Cattle Fattening Program Investment',
+    image: 'assets/images/Cattle.jpg',
+    investors: 1080,
     price: 5000,
   ),
   Investment(

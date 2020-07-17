@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practiceapp/widgets/buttonfield.dart';
 import 'package:practiceapp/widgets/exploretab.dart';
+import 'package:practiceapp/widgets/investview_activetab_diaplay.dart';
 
 class InvestView extends StatelessWidget {
   @override
@@ -30,93 +30,55 @@ class InvestView extends StatelessWidget {
           ],
         ),
         SizedBox(height: 200),
-        Container(
-          // color: Colors.blue,
-          height: deviceSize.height - 400,
-          child: DefaultTabController(
-            length: 3,
-            child: SizedBox(
-              // height: 200,
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    height: deviceSize.height * 0.05,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 0.5,
-                      ),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    width: double.infinity,
-                    child: TabBar(
-                      indicator: BoxDecoration(
-                        color: Theme.of(context).accentColor,
+        Expanded(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            child: DefaultTabController(
+              length: 3,
+              child: SizedBox(
+                // height: 200,
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: deviceSize.height * 0.05,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0.5,
+                        ),
                         borderRadius: BorderRadius.circular(15),
-                        border:
-                            Border.all(width: 0.5, style: BorderStyle.solid),
                       ),
-                      unselectedLabelColor: Colors.black,
-                      tabs: [
-                        Text('Active'),
-                        Text('Explore'),
-                        Text('Mature'),
-                      ],
+                      width: double.infinity,
+                      child: TabBar(
+                        indicator: BoxDecoration(
+                          color: Theme.of(context).accentColor,
+                          borderRadius: BorderRadius.circular(15),
+                          border:
+                              Border.all(width: 0.5, style: BorderStyle.solid),
+                        ),
+                        unselectedLabelColor: Colors.black,
+                        tabs: [
+                          Text('Active'),
+                          Text('Explore'),
+                          Text('Mature'),
+                        ],
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: TabBarView(
-                      children: [
-                        ActiveTabDisplay(),
-                        ExploreTab(),
-                        ActiveTabDisplay(),
-                      ],
+                    Expanded(
+                      child: TabBarView(
+                        children: [
+                          ActiveTabDisplay(),
+                          ExploreTab(),
+                          ActiveTabDisplay(),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
         ),
       ],
-    );
-  }
-}
-
-class ActiveTabDisplay extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(top: 60),
-            child: Text(
-              'Start Investing!',
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).accentColor,
-              ),
-            ),
-          ),
-          SizedBox(height: 20),
-          Text(
-            'Start investing in verified opportunities. Lets help you get Started,',
-            textAlign: TextAlign.center,
-          ),
-          ButtonField(
-            title: 'INVEST NOW',
-            color: Theme.of(context).accentColor,
-            textColor: Theme.of(context).buttonColor,
-            borderColor: Theme.of(context).accentColor,
-          ),
-          ButtonField(
-            title: 'LEARN MORE',
-            borderColor: Theme.of(context).accentColor,
-            textColor: Theme.of(context).accentColor,
-          ),
-        ],
-      ),
     );
   }
 }

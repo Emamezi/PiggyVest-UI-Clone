@@ -29,7 +29,7 @@ class SavingsView extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '40000.00',
+                      '****',
                       style: TextStyle(
                           color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,

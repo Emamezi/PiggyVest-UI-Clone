@@ -43,6 +43,9 @@ class ButtonField extends StatelessWidget {
           onPressed: () {},
           child: Text(
             title,
+            style: TextStyle(
+              fontSize: 16,
+            ),
           ),
         ),
       ),
