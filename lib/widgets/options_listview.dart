@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practiceapp/views/savings_view.dart';
 import 'package:practiceapp/widgets/options_container.dart';
 
 class OptionsListView extends StatelessWidget {
@@ -19,6 +20,10 @@ class OptionsListView extends StatelessWidget {
       // dragStartBehavior: DragStartBehavior.start,
       children: <Widget>[
         OptionsContainer(
+          onTap: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (ctx) => SavingsView()));
+          },
           color: Theme.of(context).primaryColor,
           icons: Icons.verified_user,
           iconColor: Colors.white,

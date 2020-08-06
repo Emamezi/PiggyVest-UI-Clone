@@ -32,9 +32,9 @@ final investmentData = [
     price: 5000,
   ),
   Investment(
-    title: 'Ginger Farm Investment',
-    image: 'assets/images/ginger.jp2',
-    investors: 1691,
+    title: 'Secue fixed income investment',
+    image: 'assets/images/IMG_5036.JPG',
+    investors: 833,
     price: 5000,
   ),
   Investment(

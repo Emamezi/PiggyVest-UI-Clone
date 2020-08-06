@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:practiceapp/utils/styles.dart';
 import 'package:practiceapp/widgets/options_listview.dart';
 import 'package:practiceapp/widgets/quicksave.dart';
+import 'package:provider/provider.dart';
 
 class HomeView extends StatelessWidget {
+  static const String routeName = 'home';
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       floatingActionButton: QuickSave(context),
       body: Padding(
         padding: const EdgeInsets.only(top: 60, left: 10, right: 10),
@@ -102,6 +106,7 @@ Widget ProductsContainer(
       height: MediaQuery.of(context).size.height * 0.11,
       width: MediaQuery.of(context).size.width * 0.99,
       decoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15),
           topRight: Radius.circular(15),
