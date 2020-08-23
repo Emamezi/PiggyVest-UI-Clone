@@ -15,7 +15,7 @@ abstract class Styles {
       accentColor: isDarkTheme ? Color(0xff8633d8) : Color(0xff8633d8),
       buttonColor: isDarkTheme ? Color(0xff8633d8) : Colors.white,
       iconTheme: IconThemeData(color: isDarkTheme ? Colors.grey : Colors.grey),
-      cardColor: isDarkTheme ? Colors.black.withOpacity(0.8) : Colors.white,
+      cardColor: isDarkTheme ? Color(0xff1c1d1f) : Colors.white,
       indicatorColor: isDarkTheme ? Colors.blue.shade800 : Colors.blue.shade800,
       brightness: isDarkTheme ? Brightness.dark : Brightness.light,
       // toggleButtonsTheme: ToggleButtonsThemeData(

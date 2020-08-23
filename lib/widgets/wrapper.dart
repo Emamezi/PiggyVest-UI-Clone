@@ -6,6 +6,8 @@ import '../views/invest_view.dart';
 import '../views/savings_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// GlobalKey _scaffoldState= GlobalKey<ScaffoldState>();
+
 class Wrapper extends StatefulWidget {
   @override
   _WrapperState createState() => _WrapperState();

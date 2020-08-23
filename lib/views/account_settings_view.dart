@@ -6,7 +6,6 @@ class AccountSettingsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
@@ -19,7 +18,7 @@ class AccountSettingsView extends StatelessWidget {
               Navigator.of(context).pop();
             }),
       ),
-      bottomNavigationBar: AccountSettingsBottonAppBar(),
+      bottomNavigationBar: AccountSettingsBottomButton(),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 20,
@@ -79,8 +78,8 @@ class AccountSettingsView extends StatelessWidget {
   }
 }
 
-class AccountSettingsBottonAppBar extends StatelessWidget {
-  const AccountSettingsBottonAppBar({
+class AccountSettingsBottomButton extends StatelessWidget {
+  const AccountSettingsBottomButton({
     Key key,
   }) : super(key: key);
 
@@ -89,6 +88,7 @@ class AccountSettingsBottonAppBar extends StatelessWidget {
     return BottomAppBar(
       child: Container(
         margin: EdgeInsets.all(20),
+        width: double.infinity,
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(

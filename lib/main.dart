@@ -3,6 +3,7 @@ import 'package:practiceapp/utils/styles.dart';
 import 'package:practiceapp/views/account_view.dart';
 import 'package:practiceapp/views/home_view.dart';
 import 'package:practiceapp/views/invest_view.dart';
+import 'package:practiceapp/views/pigybank_view.dart';
 import 'package:practiceapp/views/savings_view.dart';
 import 'package:provider/provider.dart';
 import './widgets/wrapper.dart';
@@ -49,6 +50,7 @@ class _MyAppState extends State<MyApp> {
             AccountView.routeName: (ctx) => AccountView(),
             SavingsView.routeName: (ctx) => SavingsView(),
             HomeView.routeName: (ctx) => HomeView(),
+            PiggyBankView.routeName: (ctx) => PiggyBankView(),
           },
         );
       }),
